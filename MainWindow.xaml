@@ -1,0 +1,44 @@
+<Window x:Class="Kalkulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kalkulator"
+        mc:Ignorable="d"
+        Title="Kalkulator" Height="450" Width="350">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="Display"
+                 FontSize="28"
+                 Height="60"
+                 IsReadOnly="True"
+                 TextAlignment="Right"
+                 VerticalContentAlignment="Center"
+                 Margin="0,0,0,10"/>
+        <UniformGrid Grid.Row="1" Columns="4" Rows="6">
+            <Button Content="7" Click="Number_Click"/>
+            <Button Content="8" Click="Number_Click"/>
+            <Button Content="9" Click="Number_Click"/>
+            <Button Content="/" Click="Operation_Click"/>
+            <Button Content="4" Click="Number_Click"/>
+            <Button Content="5" Click="Number_Click"/>
+            <Button Content="6" Click="Number_Click"/>
+            <Button Content="*" Click="Operation_Click"/>
+            <Button Content="1" Click="Number_Click"/>
+            <Button Content="2" Click="Number_Click"/>
+            <Button Content="3" Click="Number_Click"/>
+            <Button Content="-" Click="Operation_Click"/>
+            <Button Content="0" Click="Number_Click"/>
+            <Button Content="C" Click="Clear_Click"/>
+            <Button Content="=" Click="Equals_Click"/>
+            <Button Content="+" Click="Operation_Click"/>
+            <Button Content="%" Click="Percent_Click"/>
+            <Button Content="√" Click="Sqrt_Click"/>
+            <Button Content="1/x" Click="Reciprocal_Click"/>
+            <Button Content="x²" Click="Square_Click"/>
+        </UniformGrid>
+    </Grid>
+</Window>
